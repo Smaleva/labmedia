@@ -38,6 +38,19 @@ body a {
   display: inline-block;
   text-decoration: none;
 }
+body .tag-link, body .footer-menu-item_header a, body .footer-menu-item a {
+  font-size: 12px;
+  line-height: 2;
+  color: #666666;
+  border-bottom: 1px solid #f2f2f2;
+  margin-right: 20px;
+}
+body h1 {
+  line-height: 1.1346153846;
+  color: #000000;
+  margin: 45px 0 52px;
+  font-size: 52px;
+}
 body header {
   min-height: 120px;
   border-bottom: 1px solid #f2f2f2;
@@ -101,6 +114,35 @@ body main .breadcrumbs a::after {
 }
 body main .breadcrumbs a:last-child::after {
   content: "";
+}
+body main .preview > div {
+  width: 50%;
+}
+body main .preview .article-wrapper p {
+  font-size: 24px;
+  line-height: 1.5;
+}
+body main .preview .article-wrapper .tags-block-item {
+  font-size: 12px;
+  line-height: 2;
+  background: #ececec;
+  color: #666666;
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-right: 5px;
+}
+body main .preview h3 {
+  font-size: 12px;
+  font-family: "DINPro Bold", sans-serif;
+  line-height: 2;
+  color: #000000;
+}
+body .footer-menu {
+  list-style: none;
+}
+body .footer-menu-item_header a {
+  font-size: 18px;
+  line-height: 1.3333333333;
 }
 
 /*# sourceMappingURL=style.css.map */

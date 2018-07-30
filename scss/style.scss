@@ -66,6 +66,23 @@ body {
         display: inline-block;
         text-decoration: none;
     }
+    .tag-link {
+        font: {
+            size: $font-size - 4px;
+        }
+        line-height: (24px/12px);
+        color: $color-grey-link;
+        border-bottom: 1px solid $color-grey-line;
+        margin-right: 20px;
+    }
+    h1 {
+        line-height: (59px/52px);
+        color: $color-black;
+        margin: 45px 0 52px;
+        font: {
+            size: 52px;
+        }
+    }
     header {
         min-height: 120px;
         border-bottom: 1px solid $color-grey-line;
@@ -136,6 +153,49 @@ body {
                     content: "";
                 }
             }
+        }
+        .preview {
+            &>div {
+                width: 50%;
+            }
+            .article-wrapper {
+                p {
+                    font: {
+                        size: $font-size + 8px;
+                    }
+                    line-height: (36px/24px);
+                }
+                .tags-block {
+                    &-item {
+                        font-size: $font-size - 4px;
+                        line-height: (24px/12px);
+                        background: $color-grey-back;
+                        color: $color-grey-link;
+                        border-radius: $border-radius - 1px;
+                        padding: 0 10px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+            h3 {
+                font: {
+                    size: $font-size - 4px;
+                    family: $font-bold;
+                }
+                line-height: (24px/12px);
+                color: $color-black;
+            }
+        }
+    }
+    .footer-menu {
+        list-style: none;
+        &-item a {
+            @extend .tag-link;
+        }
+        &-item_header a{
+            @extend .tag-link;
+            font-size: $font-size + 2px;
+            line-height: (24px/18px);
         }
     }
 }
