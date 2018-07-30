@@ -10,5 +10,97 @@
   font-family: "DINPro Bold";
   src: url("./fonts/DINPro/DINPro-Bold.ttf");
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.flex, body header,
+body .left-menu,
+body .right-menu,
+body .footer,
+body .members-block,
+body .preview {
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  color: #000000;
+  max-width: 1920px;
+  height: auto;
+  margin: 0 auto;
+  font-family: "DINPro Regular", sans-serif;
+}
+body a {
+  display: inline-block;
+  text-decoration: none;
+}
+body header {
+  min-height: 120px;
+  border-bottom: 1px solid #f2f2f2;
+  align-items: center;
+  padding: 0 35px;
+}
+body header .main-menu {
+  margin: 0 53px;
+}
+body header .main-menu-item {
+  color: #000000;
+  padding: 5px 0;
+  margin: 0 10px;
+  line-height: 1.25;
+  border-bottom: 1px solid #999999;
+  font-family: "Circe", sans-serif;
+  font-size: 16px;
+}
+body header .logo-link {
+  padding: 2px 0;
+}
+body header .right-menu {
+  align-items: center;
+}
+body header .right-menu-item {
+  margin: 0 10px;
+  position: relative;
+}
+body header .right-menu .user-pic img {
+  border-radius: 50%;
+}
+body header .right-menu .alerts::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fd5520;
+  content: "+20";
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 5px 6px;
+  font-size: 12px;
+  transform: translate(40%, -100%);
+}
+body main .main-wrapper {
+  max-width: 1578px;
+  margin: 0 auto;
+  padding: 58px 0;
+}
+body main .breadcrumbs a {
+  color: #999999;
+  border-bottom: 1px solid #ececec;
+  margin-right: 12px;
+  position: relative;
+  font-size: 14px;
+}
+body main .breadcrumbs a::after {
+  content: "/";
+  color: inherit;
+  position: absolute;
+  right: -10%;
+}
+body main .breadcrumbs a:last-child::after {
+  content: "";
+}
 
 /*# sourceMappingURL=style.css.map */

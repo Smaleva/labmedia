@@ -2,11 +2,140 @@
     font-family: "Circe";
     src: url("./fonts/Circe/Circe-Bold.otf");
 }
+
 @font-face {
     font-family: "DINPro Regular";
     src: url("./fonts/DINPro/DINPro.ttf");
 }
+
 @font-face {
     font-family: "DINPro Bold";
     src: url("./fonts/DINPro/DINPro-Bold.ttf");
+}
+
+$font: 'DINPro Regular',
+sans-serif;
+$font-bold: 'DINPro Bold',
+sans-serif;
+$font-header: 'Circe',
+sans-serif;
+$font-size: 16px;
+$color-black: #000000;
+$color-grey: #999999;
+$color-grey-link: #666666;
+$color-grey-back: #ececec;
+$color-grey-line: #f2f2f2;
+$color-white: #ffffff;
+$color-orange: #fd5520;
+$border-radius: 4px;
+@mixin box-shadow($b_shadow) {
+    -moz-box-shadow: $b_shadow;
+    -webkit-box-shadow: $b_shadow;
+    box-shadow: $b_shadow;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+body {
+    color: $color-black;
+    max-width: 1920px;
+    height: auto;
+    margin: 0 auto;
+    font: {
+        family: $font;
+    }
+    header,
+    .left-menu,
+    .right-menu,
+    .footer,
+    .members-block,
+    .preview {
+        @extend .flex;
+    }
+    a {
+        display: inline-block;
+        text-decoration: none;
+    }
+    header {
+        min-height: 120px;
+        border-bottom: 1px solid $color-grey-line;
+        align-items: center;
+        padding: 0 35px;
+        .main-menu {
+            margin: 0 53px;
+            &-item {
+                color: $color-black;
+                padding: 5px 0;
+                margin: 0 10px;
+                line-height: (20px/16px);
+                border-bottom: 1px solid $color-grey;
+                font: {
+                    family: $font-header;
+                    size: $font-size;
+                }
+            }
+        }
+        .logo-link {
+            padding: 2px 0;
+        }
+        .right-menu {
+            align-items: center;
+            &-item {
+                margin: 0 10px;
+                position: relative;
+            }
+            .user-pic img {
+                border-radius: 50%;
+            }
+            .alerts::after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: $color-orange;
+                content: "+20";
+                color: $color-white;
+                border-radius: $border-radius;
+                padding: 5px 6px;
+                font-size: $font-size - 4px;
+                transform: translate(40%, -100%);
+            }
+        }
+    }
+    main {
+        .main-wrapper {
+            max-width: 1578px;
+            margin: 0 auto;
+            padding: 58px 0;
+        }
+        .breadcrumbs {
+            a {
+                color: $color-grey;
+                border-bottom: 1px solid $color-grey-back;
+                margin-right: 12px;
+                position: relative;
+                font: {
+                    size: $font-size - 2px;
+                }
+                &::after {
+                    content: "/";
+                    color: inherit;
+                    position: absolute;
+                    right: -10%;
+                }
+                &:last-child::after {
+                    content: "";
+                }
+            }
+        }
+    }
 }
