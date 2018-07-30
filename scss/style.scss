@@ -75,12 +75,29 @@ body {
         border-bottom: 1px solid $color-grey-line;
         margin-right: 20px;
     }
+    .link {
+        font: {
+            size: $font-size - 2px;
+        }
+        line-height: (19px/14px);
+        color: $color-orange;
+        border: 1px solid $color-orange;
+        border-radius: $border-radius * 5;
+        padding: 10px 20px;
+    }
     h1 {
         line-height: (59px/52px);
         color: $color-black;
         margin: 45px 0 52px;
         font: {
             size: 52px;
+        }
+    }
+    h2 {
+        line-height: (71px/40px);
+        color: $color-black;
+        font: {
+            size: 40px;
         }
     }
     header {
@@ -174,6 +191,9 @@ body {
                         border-radius: $border-radius - 1px;
                         padding: 0 10px;
                         margin-right: 5px;
+                        &:hover {
+                            color: $color-orange;
+                        }
                     }
                 }
             }
@@ -184,6 +204,34 @@ body {
                 }
                 line-height: (24px/12px);
                 color: $color-black;
+            }
+            .edit-mode {
+                font-size: $font-size - 2px;
+                color: $color-orange;
+                border-bottom: 1px dotted $color-orange;
+                position: relative;
+                margin-left: 25px;
+                &::before {
+                    position: absolute;
+                    content: url("../img/edit-icon.png");
+                    transform: translate(-120%,0);
+                }
+            }
+        }
+        .members-wrapper {
+            .sort-inner a{
+                color: $color-orange;
+                border-bottom: 1px solid $color-orange;
+                margin-right: 34px;
+                font: {
+                    size: $font-size - 2px;
+                }
+            }
+            .members-block {
+                flex-wrap: wrap;
+                .members-item {
+                    width: 25%;
+                }
             }
         }
     }

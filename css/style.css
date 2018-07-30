@@ -45,11 +45,24 @@ body .tag-link, body .footer-menu-item_header a, body .footer-menu-item a {
   border-bottom: 1px solid #f2f2f2;
   margin-right: 20px;
 }
+body .link {
+  font-size: 14px;
+  line-height: 1.3571428571;
+  color: #fd5520;
+  border: 1px solid #fd5520;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
 body h1 {
   line-height: 1.1346153846;
   color: #000000;
   margin: 45px 0 52px;
   font-size: 52px;
+}
+body h2 {
+  line-height: 1.775;
+  color: #000000;
+  font-size: 40px;
 }
 body header {
   min-height: 120px;
@@ -131,11 +144,38 @@ body main .preview .article-wrapper .tags-block-item {
   padding: 0 10px;
   margin-right: 5px;
 }
+body main .preview .article-wrapper .tags-block-item:hover {
+  color: #fd5520;
+}
 body main .preview h3 {
   font-size: 12px;
   font-family: "DINPro Bold", sans-serif;
   line-height: 2;
   color: #000000;
+}
+body main .preview .edit-mode {
+  font-size: 14px;
+  color: #fd5520;
+  border-bottom: 1px dotted #fd5520;
+  position: relative;
+  margin-left: 25px;
+}
+body main .preview .edit-mode::before {
+  position: absolute;
+  content: url("../img/edit-icon.png");
+  transform: translate(-120%, 0);
+}
+body main .members-wrapper .sort-inner a {
+  color: #fd5520;
+  border-bottom: 1px solid #fd5520;
+  margin-right: 34px;
+  font-size: 14px;
+}
+body main .members-wrapper .members-block {
+  flex-wrap: wrap;
+}
+body main .members-wrapper .members-block .members-item {
+  width: 25%;
 }
 body .footer-menu {
   list-style: none;
