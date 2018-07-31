@@ -339,7 +339,10 @@ body {
             padding: 30px;
             margin: 20px 0;
             border-radius: $border-radius - 1px;
-            @include box-shadow(0px 2px 8px 0px rgba(7, 70, 123, 0.3));
+            @include box-shadow(0px 2px 8px 0px rgba(7,
+            70,
+            123,
+            0.3));
             &::before {
                 content: "";
                 background: url("../img/star.png");
@@ -367,18 +370,79 @@ body {
             line-height: (27px/14px);
         }
     }
-    .footer-menu {
-        list-style: none;
-        @media screen and (max-width: 600px) {
-            display: none;
+    .bid-wrapper {
+        .sort-item {
+            font: {
+                size: $font-size - 2px;
+            }
+            line-height: (33px/14px);
+            color: $color-orange;
+            border-bottom: 1px dotted $color-orange;
+            margin-right: 20px;
+            text-align: center;
+            &.is-active,
+            &:hover {
+                background: #ffe6de;
+                border-radius: $border-radius - 1px;
+                border-bottom: none;
+                min-width: 162px;
+            }
         }
-        &-item a {
-            @extend .tag-link;
+        table {
+            min-height: 292px;
+            min-width: 1350px;
+            max-width: 1350px;
+            width: 100%;
+            text-align: left;
+            font-size: $font-size - 4px;
+            border-collapse: collapse;
+            margin: 40px 0;
+            thead {
+                color: $color-grey-link;
+                border-bottom: 1px solid $color-grey-back;
+                line-height: (19px/12px);
+            }
+            tbody {
+                color: $color-black;
+                line-height: (15px/12px);
+                tr.is-active {
+                    background: #ffeee8;
+                }
+            }
+            th {
+                width: (100%/7);
+            }
         }
-        &-item_header a {
-            @extend .tag-link;
+        .btn-link {
+            color: $color-orange;
             font-size: $font-size + 2px;
             line-height: (24px/18px);
+            margin-right: 22px;
+            &.is-active {
+                color: $color-black;
+            }
+        }
+    }
+    footer {
+        border-top: 1px solid #f2f2f2;
+        padding-top: 68px;
+        .footer-menu {
+            list-style: none;
+            @media screen and (max-width: 600px) {
+                display: none;
+            }
+            &-item a {
+                @extend .tag-link;
+            }
+            &-item_header a {
+                @extend .tag-link;
+                font-size: $font-size + 2px;
+                line-height: (24px/18px);
+            }
+        }
+        p.copyright {
+            font-size: $font-size - 4px;
+            line-height: (15px/12px);
         }
     }
 }

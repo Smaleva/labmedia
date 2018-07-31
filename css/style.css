@@ -48,14 +48,14 @@ body svg:hover path {
   stroke: #fd5520;
   fill: #fd5520;
 }
-body .tag-link, body .footer-menu-item_header a, body .footer-menu-item a {
+body .tag-link, body footer .footer-menu-item_header a, body footer .footer-menu-item a {
   font-size: 12px;
   line-height: 2;
   color: #666666;
   border-bottom: 1px solid #f2f2f2;
   margin-right: 20px;
 }
-body .tag-link:hover, body .footer-menu-item_header a:hover, body .footer-menu-item a:hover {
+body .tag-link:hover, body footer .footer-menu-item_header a:hover, body footer .footer-menu-item a:hover {
   color: #fd5520;
   border-color: #fd5520;
 }
@@ -309,17 +309,73 @@ body .popular-wrapper .info-block p {
   margin-right: 20px;
   line-height: 1.9285714286;
 }
-body .footer-menu {
+body .bid-wrapper .sort-item {
+  font-size: 14px;
+  line-height: 2.3571428571;
+  color: #fd5520;
+  border-bottom: 1px dotted #fd5520;
+  margin-right: 20px;
+  text-align: center;
+}
+body .bid-wrapper .sort-item.is-active, body .bid-wrapper .sort-item:hover {
+  background: #ffe6de;
+  border-radius: 3px;
+  border-bottom: none;
+  min-width: 162px;
+}
+body .bid-wrapper table {
+  min-height: 292px;
+  min-width: 1350px;
+  max-width: 1350px;
+  width: 100%;
+  text-align: left;
+  font-size: 12px;
+  border-collapse: collapse;
+  margin: 40px 0;
+}
+body .bid-wrapper table thead {
+  color: #666666;
+  border-bottom: 1px solid #ececec;
+  line-height: 1.5833333333;
+}
+body .bid-wrapper table tbody {
+  color: #000000;
+  line-height: 1.25;
+}
+body .bid-wrapper table tbody tr.is-active {
+  background: #ffeee8;
+}
+body .bid-wrapper table th {
+  width: 14.2857142857%;
+}
+body .bid-wrapper .btn-link {
+  color: #fd5520;
+  font-size: 18px;
+  line-height: 1.3333333333;
+  margin-right: 22px;
+}
+body .bid-wrapper .btn-link.is-active {
+  color: #000000;
+}
+body footer {
+  border-top: 1px solid #f2f2f2;
+  padding-top: 68px;
+}
+body footer .footer-menu {
   list-style: none;
 }
 @media screen and (max-width: 600px) {
-  body .footer-menu {
+  body footer .footer-menu {
     display: none;
   }
 }
-body .footer-menu-item_header a {
+body footer .footer-menu-item_header a {
   font-size: 18px;
   line-height: 1.3333333333;
+}
+body footer p.copyright {
+  font-size: 12px;
+  line-height: 1.25;
 }
 
 /*# sourceMappingURL=style.css.map */
