@@ -32,6 +32,7 @@ body .preview {
 body {
   color: #000000;
   max-width: 1920px;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   font-family: "DINPro Regular", sans-serif;
@@ -39,6 +40,12 @@ body {
 body a {
   display: inline-block;
   text-decoration: none;
+}
+body svg {
+  cursor: pointer;
+}
+body svg:hover path {
+  stroke: #fd5520;
 }
 body .tag-link, body .footer-menu-item_header a, body .footer-menu-item a {
   font-size: 12px;
@@ -142,6 +149,11 @@ body main .breadcrumbs a:hover {
   color: #fd5520;
   border-color: #fd5520;
 }
+@media screen and (max-width: 600px) {
+  body main .preview {
+    flex-direction: column;
+  }
+}
 body main .preview > div {
   width: 50%;
 }
@@ -204,6 +216,11 @@ body main .members-wrapper .members-block .members-item {
   justify-content: flex-start;
   margin: 31px 0;
 }
+@media screen and (max-width: 600px) {
+  body main .members-wrapper .members-block .members-item {
+    width: 100%;
+  }
+}
 body main .members-wrapper .members-block .members-item p {
   margin: 10px 0;
   color: #666666;
@@ -254,8 +271,41 @@ body main .members-wrapper .become-member {
 body main .members-wrapper .become-member:hover {
   opacity: 0.6;
 }
+body .popular-wrapper .popular-item {
+  position: relative;
+  max-width: 780px;
+  min-width: 780px;
+  width: 100%;
+  min-height: 212px;
+  background: #ffffff;
+  padding: 30px;
+  margin: 10px 0;
+  border-radius: 3px;
+  -moz-box-shadow: 0px 2px 8px 0px rgba(7, 70, 123, 0.3);
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(7, 70, 123, 0.3);
+  box-shadow: 0px 2px 8px 0px rgba(7, 70, 123, 0.3);
+}
+body .popular-wrapper .popular-title {
+  font-size: 16px;
+  font-family: "DINPro Bold", sans-serif;
+  line-height: 1.4375;
+  color: #000000;
+  border-bottom: 1px solid #ececec;
+  display: inline;
+}
+body .popular-wrapper .info-block p {
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 20px;
+  line-height: 1.9285714286;
+}
 body .footer-menu {
   list-style: none;
+}
+@media screen and (max-width: 600px) {
+  body .footer-menu {
+    display: none;
+  }
 }
 body .footer-menu-item_header a {
   font-size: 18px;

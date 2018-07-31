@@ -49,6 +49,7 @@ $border-radius: 4px;
 body {
     color: $color-black;
     max-width: 1920px;
+    width: 100%;
     height: auto;
     margin: 0 auto;
     font: {
@@ -66,6 +67,12 @@ body {
     a {
         display: inline-block;
         text-decoration: none;
+    }
+    svg {
+        cursor: pointer;
+    }
+    svg:hover path {
+        stroke: $color-orange;
     }
     .tag-link {
         font: {
@@ -185,6 +192,9 @@ body {
             }
         }
         .preview {
+            @media screen and (max-width: 600px) {
+                flex-direction: column;
+            }
             &>div {
                 width: 50%;
             }
@@ -256,6 +266,9 @@ body {
                     width: 25%;
                     justify-content: flex-start;
                     margin: 31px 0;
+                    @media screen and (max-width: 600px) {
+                        width: 100%;
+                    }
                     p {
                         margin: 10px 0;
                         color: $color-grey-link;
@@ -314,8 +327,41 @@ body {
             }
         }
     }
+    .popular-wrapper {
+        .popular-item {
+            position: relative;
+            max-width: 780px;
+            min-width: 780px;
+            width: 100%;
+            min-height: 212px;
+            background: $color-white;
+            padding: 30px;
+            margin: 10px 0;
+            border-radius: $border-radius - 1px;
+            @include box-shadow(0px 2px 8px 0px rgba(7, 70, 123, 0.3));
+        }
+        .popular-title {
+            font: {
+                size: $font-size;
+                family: $font-bold;
+            }
+            line-height: (23px/16px);
+            color: $color-black;
+            border-bottom: 1px solid $color-grey-back;
+            display: inline;
+        }
+        .info-block p {
+            display: inline-block;
+            font-size: $font-size - 2px;
+            margin-right: 20px;
+            line-height: (27px/14px);
+        }
+    }
     .footer-menu {
         list-style: none;
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
         &-item a {
             @extend .tag-link;
         }
