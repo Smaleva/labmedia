@@ -176,7 +176,7 @@ body main .breadcrumbs a:hover {
   color: #fd5520;
   border-color: #fd5520;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   body main .preview {
     flex-direction: column;
   }
@@ -184,7 +184,7 @@ body main .breadcrumbs a:hover {
 body main .preview > div {
   width: 50%;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   body main .preview > div {
     width: 100%;
   }
@@ -385,6 +385,11 @@ body main .members-wrapper .members-block .members-item {
   justify-content: flex-start;
   margin: 31px 0;
 }
+@media screen and (max-width: 800px) {
+  body main .members-wrapper .members-block .members-item {
+    width: 50%;
+  }
+}
 @media screen and (max-width: 600px) {
   body main .members-wrapper .members-block .members-item {
     width: 100%;
@@ -463,7 +468,7 @@ body .popular-wrapper .popular-item::before {
   top: 0;
   right: 0;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   body .popular-wrapper .popular-item {
     min-width: 100%;
   }

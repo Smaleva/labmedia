@@ -211,12 +211,12 @@ body {
             }
         }
         .preview {
-            @media screen and (max-width: 600px) {
+            @media screen and (max-width: 800px) {
                 flex-direction: column;
             }
             &>div {
                 width: 50%;
-                @media screen and (max-width: 600px) {
+                @media screen and (max-width: 800px) {
                     width: 100%;
                 }
             }
@@ -415,6 +415,9 @@ body {
                     width: 25%;
                     justify-content: flex-start;
                     margin: 31px 0;
+                    @media screen and (max-width: 800px) {
+                        width: 50%;
+                    }
                     @media screen and (max-width: 600px) {
                         width: 100%;
                     }
@@ -500,7 +503,7 @@ body {
                 top: 0;
                 right: 0;
             }
-            @media screen and (max-width: 600px) {
+            @media screen and (max-width: 800px) {
                 min-width: 100%;
             }
         }
