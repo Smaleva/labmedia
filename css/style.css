@@ -46,6 +46,7 @@ body svg {
 }
 body svg:hover path {
   stroke: #fd5520;
+  fill: #fd5520;
 }
 body .tag-link, body .footer-menu-item_header a, body .footer-menu-item a {
   font-size: 12px;
@@ -279,11 +280,20 @@ body .popular-wrapper .popular-item {
   min-height: 212px;
   background: #ffffff;
   padding: 30px;
-  margin: 10px 0;
+  margin: 20px 0;
   border-radius: 3px;
   -moz-box-shadow: 0px 2px 8px 0px rgba(7, 70, 123, 0.3);
   -webkit-box-shadow: 0px 2px 8px 0px rgba(7, 70, 123, 0.3);
   box-shadow: 0px 2px 8px 0px rgba(7, 70, 123, 0.3);
+}
+body .popular-wrapper .popular-item::before {
+  content: "";
+  background: url("../img/star.png");
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 body .popular-wrapper .popular-title {
   font-size: 16px;

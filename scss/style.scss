@@ -70,9 +70,10 @@ body {
     }
     svg {
         cursor: pointer;
-    }
-    svg:hover path {
-        stroke: $color-orange;
+        &:hover path {
+            stroke: $color-orange;
+            fill: $color-orange;
+        }
     }
     .tag-link {
         font: {
@@ -336,9 +337,18 @@ body {
             min-height: 212px;
             background: $color-white;
             padding: 30px;
-            margin: 10px 0;
+            margin: 20px 0;
             border-radius: $border-radius - 1px;
             @include box-shadow(0px 2px 8px 0px rgba(7, 70, 123, 0.3));
+            &::before {
+                content: "";
+                background: url("../img/star.png");
+                width: 60px;
+                height: 60px;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
         }
         .popular-title {
             font: {
