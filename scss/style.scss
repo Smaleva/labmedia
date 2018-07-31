@@ -117,6 +117,9 @@ body {
             size: 40px;
         }
     }
+    section {
+        padding: 0 1%;
+    }
     header {
         min-height: 120px;
         border-bottom: 1px solid $color-grey-line;
@@ -351,6 +354,9 @@ body {
                 position: absolute;
                 top: 0;
                 right: 0;
+            }
+            @media screen and (max-width: 600px){
+                min-width: 100%;
             }
         }
         .popular-title {
