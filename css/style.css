@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Circe";
   src: url("./fonts/Circe/Circe-Bold.otf");
@@ -22,6 +23,7 @@ body .left-menu,
 body .right-menu,
 body .footer,
 body .members-block,
+body .members-item,
 body .preview {
   display: flex;
   justify-content: space-between;
@@ -45,6 +47,10 @@ body .tag-link, body .footer-menu-item_header a, body .footer-menu-item a {
   border-bottom: 1px solid #f2f2f2;
   margin-right: 20px;
 }
+body .tag-link:hover, body .footer-menu-item_header a:hover, body .footer-menu-item a:hover {
+  color: #fd5520;
+  border-color: #fd5520;
+}
 body .link {
   font-size: 14px;
   line-height: 1.3571428571;
@@ -52,6 +58,10 @@ body .link {
   border: 1px solid #fd5520;
   border-radius: 20px;
   padding: 10px 20px;
+}
+body .link:hover {
+  color: #ffffff;
+  background: #fd5520;
 }
 body h1 {
   line-height: 1.1346153846;
@@ -128,6 +138,10 @@ body main .breadcrumbs a::after {
 body main .breadcrumbs a:last-child::after {
   content: "";
 }
+body main .breadcrumbs a:hover {
+  color: #fd5520;
+  border-color: #fd5520;
+}
 body main .preview > div {
   width: 50%;
 }
@@ -165,17 +179,80 @@ body main .preview .edit-mode::before {
   content: url("../img/edit-icon.png");
   transform: translate(-120%, 0);
 }
-body main .members-wrapper .sort-inner a {
+body main .preview .edit-mode:hover {
+  border-color: #666666;
+  color: #666666;
+}
+body main .members-wrapper .sort-item,
+body main .members-wrapper .sort-rate {
   color: #fd5520;
   border-bottom: 1px solid #fd5520;
   margin-right: 34px;
   font-size: 14px;
 }
+body main .members-wrapper .sort-item:hover,
+body main .members-wrapper .sort-rate:hover {
+  border-color: #666666;
+  color: #666666;
+}
 body main .members-wrapper .members-block {
   flex-wrap: wrap;
+  margin: 4px 0 40px;
 }
 body main .members-wrapper .members-block .members-item {
   width: 25%;
+  justify-content: flex-start;
+  margin: 31px 0;
+}
+body main .members-wrapper .members-block .members-item p {
+  margin: 10px 0;
+  color: #666666;
+  font-size: 12px;
+}
+body main .members-wrapper .members-block .members-item .member-description {
+  padding: 3px 16px;
+}
+body main .members-wrapper .members-block .sort-rate {
+  margin-right: 10px;
+}
+body main .members-wrapper .members-block h4 {
+  font-family: "DINPro Bold", sans-serif;
+  font-size: 14px;
+  line-height: 1.3571428571;
+  color: #000000;
+  border-bottom: 1px solid #ececec;
+  display: inline;
+  padding: 3px 0;
+}
+body main .members-wrapper .members-block .no-pic {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 1px solid #ececec;
+  position: relative;
+}
+body main .members-wrapper .members-block .no-pic::after {
+  content: "И.А.";
+  text-align: center;
+  color: #999999;
+  font-size: 12px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+body main .members-wrapper .become-member,
+body main .members-wrapper .show-more {
+  font-size: 18px;
+  line-height: 1.3333333333;
+  border-radius: 24px;
+}
+body main .members-wrapper .become-member {
+  color: #ffffff;
+  background: #fd5520;
+}
+body main .members-wrapper .become-member:hover {
+  opacity: 0.6;
 }
 body .footer-menu {
   list-style: none;

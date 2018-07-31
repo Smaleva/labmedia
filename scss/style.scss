@@ -59,6 +59,7 @@ body {
     .right-menu,
     .footer,
     .members-block,
+    .members-item,
     .preview {
         @extend .flex;
     }
@@ -74,6 +75,10 @@ body {
         color: $color-grey-link;
         border-bottom: 1px solid $color-grey-line;
         margin-right: 20px;
+        &:hover {
+            color: $color-orange;
+            border-color: $color-orange;
+        }
     }
     .link {
         font: {
@@ -84,6 +89,10 @@ body {
         border: 1px solid $color-orange;
         border-radius: $border-radius * 5;
         padding: 10px 20px;
+        &:hover {
+            color: $color-white;
+            background: $color-orange;
+        }
     }
     h1 {
         line-height: (59px/52px);
@@ -169,6 +178,10 @@ body {
                 &:last-child::after {
                     content: "";
                 }
+                &:hover {
+                    color: $color-orange;
+                    border-color: $color-orange;
+                }
             }
         }
         .preview {
@@ -214,23 +227,89 @@ body {
                 &::before {
                     position: absolute;
                     content: url("../img/edit-icon.png");
-                    transform: translate(-120%,0);
+                    transform: translate(-120%, 0);
+                }
+                &:hover {
+                    border-color: $color-grey-link;
+                    color: $color-grey-link;
                 }
             }
         }
         .members-wrapper {
-            .sort-inner a{
+            .sort-item,
+            .sort-rate {
                 color: $color-orange;
                 border-bottom: 1px solid $color-orange;
                 margin-right: 34px;
                 font: {
                     size: $font-size - 2px;
                 }
+                &:hover {
+                    border-color: $color-grey-link;
+                    color: $color-grey-link;
+                }
             }
             .members-block {
                 flex-wrap: wrap;
+                margin: 4px 0 40px;
                 .members-item {
                     width: 25%;
+                    justify-content: flex-start;
+                    margin: 31px 0;
+                    p {
+                        margin: 10px 0;
+                        color: $color-grey-link;
+                        font: {
+                            size: $font-size - 4px;
+                        }
+                    }
+                    .member-description {
+                        padding: 3px 16px;
+                    }
+                }
+                .sort-rate {
+                    margin-right: 10px;
+                }
+                h4 {
+                    font: {
+                        family: $font-bold;
+                        size: $font-size - 2px;
+                    }
+                    line-height: (19px/14px);
+                    color: $color-black;
+                    border-bottom: 1px solid $color-grey-back;
+                    display: inline;
+                    padding: 3px 0;
+                }
+                .no-pic {
+                    width: 75px;
+                    height: 75px;
+                    border-radius: 50%;
+                    border: 1px solid $color-grey-back;
+                    position: relative;
+                    &::after {
+                        content: "И.А.";
+                        text-align: center;
+                        color: $color-grey;
+                        font-size: $font-size - 4px;
+                        left: 50%;
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+            .become-member,
+            .show-more {
+                font-size: $font-size + 2px;
+                line-height: (24px/18px);
+                border-radius: $border-radius * 6;
+            }
+            .become-member {
+                color: $color-white;
+                background: $color-orange;
+                &:hover {
+                    opacity: 0.6;
                 }
             }
         }
@@ -240,7 +319,7 @@ body {
         &-item a {
             @extend .tag-link;
         }
-        &-item_header a{
+        &-item_header a {
             @extend .tag-link;
             font-size: $font-size + 2px;
             line-height: (24px/18px);
